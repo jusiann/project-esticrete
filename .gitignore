@@ -1,0 +1,29 @@
+# --- Yerel çalışma alanı (repoya girmez) ---
+# Eski fizibilite kodu, raporlar, sunumlar, veri ve arşiv: yalnız bu makinede durur.
+# Ayrıntı: documents/README.md
+/documents/
+
+# Yerel asistan talimatları ve ayarları (kişisel yollar ve veri kuralları içerir)
+/CLAUDE.md
+/.claude/
+
+# --- Gizli bilgiler ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# --- İşletim sistemi ve editör artıkları ---
+.DS_Store
+._*
+Thumbs.db
+.~lock.*#
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# --- Günlükler ---
+*.log

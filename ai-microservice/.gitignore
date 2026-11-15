@@ -1,0 +1,23 @@
+# --- Veri: hiçbiri repoya girmez (YapıRadar verisi hassas) ---
+# Dosya adları ve amaçları: data/README.md (yalnız o dosya izlenir)
+data/*
+!data/README.md
+
+# --- Eğitilmiş modeller: hassas veriden türedikleri için repoya girmez ---
+models/*
+!models/README.md
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/

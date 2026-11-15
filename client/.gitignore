@@ -1,0 +1,12 @@
+# --- Node / React ---
+node_modules/
+dist/
+build/
+.vite/
+coverage/
+*.tsbuildinfo
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env.local
+.env.*.local
