@@ -13,12 +13,25 @@ Kapsam:
 
 ```
 ai-microservice/
-├── data/       eğitim ve çalışma verisi (repoya girmez; liste: data/README.md)
-├── models/     eğitilmiş modeller (repoya girmez; liste: models/README.md)
-└── .gitignore
+├── src/esticrete_ai/
+│   ├── settings.py     yollar (ESTICRETE_DATA_DIR ile değiştirilebilir)
+│   └── data/           şema ve yükleyici: ham CSV'yi okuyup temiz, tipli tabloya çevirir
+├── tests/              pytest; uydurma CSV ile birim testleri, yerel veri varsa gerçek veri testleri
+├── data/               eğitim ve çalışma verisi (repoya girmez; liste: data/README.md)
+├── models/             eğitilmiş modeller (repoya girmez; liste: models/README.md)
+└── pyproject.toml
 ```
 
-Kaynak kod, eğitim ve test klasörleri bahar 2027'de açılır.
+## Çalıştırma
+
+```bash
+cd ai-microservice
+uv sync                 # sanal ortam ve bağımlılıklar
+uv run pytest           # testler (yerel veri yoksa gerçek veri testleri atlanır)
+uv run ruff check .     # kod denetimi
+```
+
+Model eğitimi ve API (FastAPI) adım adım eklenecek.
 
 ## Veri kuralı
 
